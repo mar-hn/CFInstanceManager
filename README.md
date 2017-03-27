@@ -1,4 +1,4 @@
-# CFInstanceManager
+# CFInstanceManager for Mac
 Instance Manager for ColdFusion
 
 ![alt tag](./assets/mainview.png)
