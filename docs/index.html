@@ -1,0 +1,2653 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#checkforvhost'
+                  class="">
+                  CheckForVhost
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isonworkerlist'
+                  class="">
+                  isOnWorkerList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getworkerconfig'
+                  class="">
+                  getWorkerConfig
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#saveworkerconfig'
+                  class="">
+                  SaveWorkerConfig
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#loadtable'
+                  class="">
+                  LoadTable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addirow'
+                  class="">
+                  AddIRow
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createirow'
+                  class="">
+                  createIRow
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fileexist'
+                  class="">
+                  FileExist
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getcfidlist'
+                  class="">
+                  getCFIDList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getremoteport'
+                  class="">
+                  getRemotePort
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gethttpport'
+                  class="">
+                  getHTTPPort
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getiurl'
+                  class="">
+                  getIURL
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getipath'
+                  class="">
+                  getIPath
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getvhost'
+                  class="">
+                  getVHost
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getvhostlist'
+                  class="">
+                  getVHostList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isonhostname'
+                  class="">
+                  isOnHostName
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#execute'
+                  class="">
+                  execute
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createcallback'
+                  class="">
+                  createCallback
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#showbuttons'
+                  class="">
+                  ShowButtons
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#hidebuttons'
+                  class="">
+                  HideButtons
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#refreshstatus'
+                  class="">
+                  RefreshStatus
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getmatches'
+                  class="">
+                  getMatches
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#showedititem'
+                  class="">
+                  ShowEditItem
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#scanforissues'
+                  class="">
+                  ScanForIssues
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getlistissues'
+                  class="">
+                  getListIssues
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#fixissues'
+                  class="">
+                  FixIssues
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addvhost'
+                  class="">
+                  AddVHost
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#removevhost'
+                  class="">
+                  RemoveVHost
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatevhost'
+                  class="">
+                  UpdateVHost
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#geticon'
+                  class="">
+                  getIcon
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#restartapache'
+                  class="">
+                  RestartApache
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sha1'
+                  class="">
+                  sha1
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#folderexist'
+                  class="">
+                  FolderExist
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#statuschange'
+                  class="">
+                  StatusChange
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#eventbtn_folderclick'
+                  class="">
+                  btn_folder#click
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checkforvhost'>
+      CheckForVhost
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Decides where to store/read Virtualhosts</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CheckForVhost()</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isonworkerlist'>
+      isOnWorkerList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if instance is on the worker list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isOnWorkerList(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Coldfusion Instance
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        true or false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getworkerconfig'>
+      getWorkerConfig
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the content of the worker.properties file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getWorkerConfig(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array with the content of worker.properties
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='saveworkerconfig'>
+      SaveWorkerConfig
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Commits changes made to the worker.properties file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SaveWorkerConfig(newconfig: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>newconfig</span> <code class='quiet'>(any)</code>
+	    Array with the content of worker.properties
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='loadtable'>
+      LoadTable
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Display instances data on main table.
+It autorefresh the status of the instance at completion.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new LoadTable()</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addirow'>
+      AddIRow
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Appends a row element into table body.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AddIRow(row: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>row</span> <code class='quiet'>(any)</code>
+	    Row element
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createirow'>
+      createIRow
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a row element.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createIRow(cItem: any): any</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cItem</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        Table row
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fileexist'>
+      FileExist
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Check if a file exist. Currently cached.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FileExist(path: any, bForce: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>path</span> <code class='quiet'>(any)</code>
+	    Path to file
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bForce</span> <code class='quiet'>(any)</code>
+	    Ignore cache
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
+        true or false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getcfidlist'>
+      getCFIDList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets a list with all ColdFusion Instances</p>
+
+
+  <div class='pre p1 fill-light mt0'>getCFIDList(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array with all CF Instances
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getremoteport'>
+      getRemotePort
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the Remote Port for the specified instance</p>
+
+
+  <div class='pre p1 fill-light mt0'>getRemotePort(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
+        Port number; returns "NULL" if operation failed.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='gethttpport'>
+      getHTTPPort
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets HTTP port for specified instance</p>
+
+
+  <div class='pre p1 fill-light mt0'>getHTTPPort(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code>:
+        Port number; returns "NULL" if operation failed.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getiurl'>
+      getIURL
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the instance URL from Apache</p>
+
+
+  <div class='pre p1 fill-light mt0'>getIURL(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        Instance URL
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getipath'>
+      getIPath
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the instance WWW folder path.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getIPath(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        WWW Folder Path
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getvhost'>
+      getVHost
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets the VirtualHost of the instance.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getVHost(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        Apache VirtualHost
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getvhostlist'>
+      getVHostList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Gets a list with all the Apache Virtualhosts</p>
+
+
+  <div class='pre p1 fill-light mt0'>getVHostList(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array of strings with all the Virtualhosts
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isonhostname'>
+      isOnHostName
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if URL is on the hosts file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isOnHostName(url: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(any)</code>
+	    URL
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        true or false
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='execute'>
+      execute
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Executes a command line.</p>
+
+
+  <div class='pre p1 fill-light mt0'>execute(command: any, callback: any, bAdmin: any, cfid: any, bOnload: any): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>command</span> <code class='quiet'>(any)</code>
+	    Command line
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    Callback function
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bAdmin</span> <code class='quiet'>(any)</code>
+	    Run as Administrtor?
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>cfid</span> <code class='quiet'>(any)</code>
+	    Optional, Instance ID
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bOnload</span> <code class='quiet'>(any)</code>
+	    If it was executed on the 'onstart' event.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createcallback'>
+      createCallback
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a callback that reads correctly the id.</p>
+
+
+  <div class='pre p1 fill-light mt0'>createCallback(_cfid: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>_cfid</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code>:
+        Callback Function
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showbuttons'>
+      ShowButtons
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Enables all shortcuts buttons</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShowButtons(id: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='hidebuttons'>
+      HideButtons
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Disables all shortcuts buttons</p>
+
+
+  <div class='pre p1 fill-light mt0'>new HideButtons(id: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='refreshstatus'>
+      RefreshStatus
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Refresh the status of all instances</p>
+
+
+  <div class='pre p1 fill-light mt0'>new RefreshStatus(bForce: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>bForce</span> <code class='quiet'>(any)</code>
+	    Force a reload.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getmatches'>
+      getMatches
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get only specified group matches</p>
+
+
+  <div class='pre p1 fill-light mt0'>getMatches(string: any, regex: any, index: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>string</span> <code class='quiet'>(any)</code>
+	    Content
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>regex</span> <code class='quiet'>(any)</code>
+	    Regex
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(any)</code>
+	    Group Index
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array with regex search result.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showedititem'>
+      ShowEditItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Show Edit tab of the specified instance.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ShowEditItem(id: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scanforissues'>
+      ScanForIssues
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Display what issues were found.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new ScanForIssues(id: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        Issue found
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getlistissues'>
+      getListIssues
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get status of all issues.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getListIssues(id: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='fixissues'>
+      FixIssues
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Execute a fix for all issues.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FixIssues(id: any, url: any, FolderPath: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(any)</code>
+	    WWW URL of instance
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>FolderPath</span> <code class='quiet'>(any)</code>
+	    Folder Path of instance
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addvhost'>
+      AddVHost
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds a new VirtualHost to Apache</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AddVHost(id: any, url: any, Folder: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(any)</code>
+	    WWW URL
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>Folder</span> <code class='quiet'>(any)</code>
+	    Folder Path
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='removevhost'>
+      RemoveVHost
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Remove the instance VirtualHost from Apache</p>
+
+
+  <div class='pre p1 fill-light mt0'>new RemoveVHost(id: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatevhost'>
+      UpdateVHost
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Updates an existant VirtualHost and changes the URL and FolderPath</p>
+
+
+  <div class='pre p1 fill-light mt0'>new UpdateVHost(id: any, url: any, Folder: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(any)</code>
+	    Instance ID
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>url</span> <code class='quiet'>(any)</code>
+	    WWW URL
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>Folder</span> <code class='quiet'>(any)</code>
+	    Folder Path
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='geticon'>
+      getIcon
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get a Material Design Icon for issue status.</p>
+
+
+  <div class='pre p1 fill-light mt0'>getIcon(b: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>b</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='restartapache'>
+      RestartApache
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Restarts Apache on current computer</p>
+
+
+  <div class='pre p1 fill-light mt0'>new RestartApache()</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sha1'>
+      sha1
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Encrypt a string with SHA1</p>
+
+
+  <div class='pre p1 fill-light mt0'>sha1(data: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>data</span> <code class='quiet'>(any)</code>
+	    Data to encrypt
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        Encrypted string
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='folderexist'>
+      FolderExist
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if a folder exists.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new FolderExist(FolderPath: any): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>FolderPath</span> <code class='quiet'>(any)</code>
+	    Folder Path
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='statuschange'>
+      StatusChange
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Start/Stop instance, and reflect on input.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new StatusChange(item: any)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>item</span> <code class='quiet'>(any)</code>
+	    Row item
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='eventbtn_folderclick'>
+      btn_folder#click
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Open Folder Dialog on Modify Tab</p>
+
+
+  <div class='pre p1 fill-light mt0'>btn_folder#click</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<VirtualHost *:80>
+    DocumentRoot "{PATH}"
+    ServerName {URL}
+    JkMountFile "{CFPATH}/config/wsconfig/1/{CFID}.properties"
+    Alias /CFIDE "{CFPATH}/{CFID}/wwwroot/CFIDE"
+</VirtualHost>

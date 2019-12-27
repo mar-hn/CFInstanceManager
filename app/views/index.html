@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CF Instance Manager</title>        
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="./../resources/css/materialize.min.css">
+        <link rel="stylesheet" href="./../resources/css/material_icons.css">        
+        <!-- JQuery -->
+        <script src="./../resources/js/jquery-3.2.0.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="./../resources/js/materialize.min.js"></script>                        
+        <script src="./../resources/js/loadingoverlay.min.js"></script>
+
+        <style>
+            .noselect, .btn-floating, .material-icons{
+                -webkit-user-select: none;
+                user-select: none;                
+            }
+            a:not([draggable=true]), img:not([draggable=true]) {
+                -webkit-user-drag: none;
+                user-drag: none;
+            }
+            a[href^="http://"],
+            a[href^="https://"],
+            a[href^="ftp://"] {
+                -webkit-user-drag: auto;
+                user-drag: auto;
+            }            
+        </style>
+    </head>
+    <body>        
+        <!-- NAVBAR -->
+        <nav id="navbar-main" class="nav-extended blue lighten-1">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Instance Manager</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a id="sn_about" href="#!">About</a></li>
+                    <li><a id="sn_devtools" href="#!">Developer Tools</a></li>
+                    <li><a id="sn_settings" href="#!">Settings</a></li>
+                    <li><a id="sn_exit" href="#!">Exit</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#test1">View</a></li>
+                    <li id="tab_modify" class="tab disabled"><a href="#test2">Modify</a></li>                                
+                </ul>
+            </div>
+        </nav>
+        <!-- CF Login Modal -->
+        <div id="mdl_cflogin" class="modal" style="width:60%">
+            <div class="modal-content">
+                <div class="row">
+                    <h5>Coldfusion Login</h5>
+                    <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="cflogin_user" type="text" class="validate" value="admin" required>
+                        <label for="cflogin_user">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input id="cflogin_password" type="password" class="validate" required autofocus>
+                        <label for="cflogin_password">Password</label>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer" style="margin-top: -10%">
+            <a href="#!" id="btn_clogin" class="modal-action waves-effect waves-green btn-flat btnsubmit">Continue</a>
+            <a href="#!" id="btn_clcancel" class="modal-action modal-close waves-effect red-green btn-flat">Cancel</a>
+            </div>
+        </div>
+        <!-- Full Delete Modal -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+            <h4>Are you sure?</h4>
+            <p>You are about to delete the entire instance, you must be absolutely sure about this.<br>
+               You wont be able to recover mappings, datasources or any info about this instance.
+               
+               <p>* Note: This won't delete the WWW Folder.</p>
+            </p>
+            </div>
+            <div class="modal-footer">
+            <a href="#!" id="btn_fdelete" class=" modal-action modal-close waves-effect waves-green btn-flat">Delete</a>
+            <a href="#!" class=" modal-action modal-close waves-effect waves-grey btn-flat">Cancel</a>
+            </div>
+        </div>
+        <!-- Clear References Modal -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+            <h4>Are you sure?</h4>
+            <p> You are about to delete all references of the instance.<br>                
+                This means you are going to do the following:
+                <p>
+                <b>
+                Clear all mentions of the instance on workers.properties<br>
+                Delete the instance properties file.<br>
+                Clear the VirtualHost made for this instance.<br>
+                Remove the hostname assigned.<br>
+                </b>
+                </p>
+                
+                The instance will still exist on ColdFusion, same with the WWW folder.
+            </p>
+            </div>
+            <div class="modal-footer">
+            <a href="#!" id="btn_rdelete" class="modal-action modal-close waves-effect waves-red btn-flat">Continue</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-grey btn-flat">Cancel</a>
+            </div>
+        </div>
+            <div id="mdl_config" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                <h4>Settings</h4>
+                <div class="row">
+                    <form id="frm_config" class="col s12" onkeypress="return event.keyCode != 13">
+                    <div class="row">
+                        <div class="col s12">
+                            <label>Navbar color</label>
+                            <select id="cnf_navcolor" class="browser-default">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="blue">Original</option>
+                                <option value="red">Red</option>
+                                <option value="green">Green</option>
+                                <option value="lime">Lime</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="grey">Grey</option>
+                                <option value="black">Black</option>
+                            </select>                            
+                        </div>
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">edit_location</i>
+                        <input id="cnf_cflocation" type="text" class="validate" required>
+                        <label for="cnf_cflocation">ColdFusion location</label>
+                        </div>
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">format_indent_decrease</i>
+                        <input id="cnf_propprefix" type="text" class="validate" required>
+                        <label for="cnf_propprefix">Properties Prefix</label>
+                        </div>
+                        <p>
+                            <input type="checkbox" id="cnf_vhpermission" />
+                            <label for="cnf_vhpermission">Add Directory permissions per virtualhost</label>
+                        </p>                                                           
+                    </div>
+                    <input type="submit" style="display: none">
+                    </form>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" id="btn_configsave" class="modal-action waves-effect waves-green btn-flat btnsubmit" style="margin-left: 5px;">Save</a>                
+                <a href="#!" id="btn_configcancel" class="modal-action modal-close waves-effect btn-flat">Cancel</a>
+                </div>
+            </div> 
+        <!-- END -->        
+        <!-- Tab 1 -->
+        <div id="test1" class="col s12 container">
+            <div class="row"></div>
+            <a href="#!" id="btn_create" class="btn-floating btn waves-effect waves-light red right"><i class="material-icons">add</i></a>
+            <a href="#!" id="btn_refresh" class="btn-floating btn waves-effect waves-light green right" style="margin-right: 10px;"><i class="material-icons">refresh</i></a>
+
+            <table class="bordered highlight">
+                <thead>
+                <tr id="columns">
+                    <th>ID</th>
+                    <th class="center">Remote<br> Port</th>
+                    <th class="center">Status</th>
+                    <th class="center"></th>
+                    <th class="center">Shortcuts</th>
+                </tr>
+                </thead>
+                <tbody id="rows">
+                </tbody>
+            </table>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <div class="row"></div>
+            <!-- MODALS -->
+            <div id="mdl_cinstance" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                <h4>Creating Instance</h4>
+                <div class="row">
+                    <form id="frm_create" class="col s12" onkeypress="return event.keyCode != 13">
+                    <div class="row">
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">fingerprint</i>
+                        <input id="c_id" type="text" class="validate" required autofocus>
+                        <label for="c_id">Instance ID</label>
+                        </div>
+                        <div class="input-field col s12">
+                        <i class="material-icons prefix">http</i>
+                        <input id="c_url" type="text" class="validate" required>
+                        <label for="c_url">WWW URL</label>
+                        </div>
+                        <div class="input-field col s11">
+                        <i class="material-icons prefix">folder</i>
+                        <input id="c_folder" type="text" class="validate" required>
+                        <label for="c_folder">WWW Folder</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <a id="btn_cfolder" class="btn-floating"><i class="material-icons">folder_open</i></a>                      
+                        </div>                                   
+                    </div>
+                    <input type="submit" style="display: none">
+                    </form>
+                </div>
+                </div>
+                <div class="modal-footer">
+                <a href="#!" id="btn_csave" class="modal-action waves-effect waves-green btn green btnsubmit" style="margin-left: 5px;">Create</a>                
+                <a href="#!" id="btn_ccancel" class="modal-action modal-close waves-effect btn red">Cancel</a>
+                </div>
+            </div>                       
+            <!--  END MODALS -->
+        </div> 
+        <!--</div>-->
+        <!-- TAB 2 -->
+        <div id="test2" class="col s12">   
+            <div class="container">
+                <div class="row"></div>
+                <h5><i class="material-icons">fingerprint</i> <span id="m_iname"></span></h5>
+                Apache Configuration:
+                <form>
+                <div class="row">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">http</i>
+                            <input id="m_url" type="text" class="validate" required>
+                            <label for="m_url">WWW URL</label>
+                        </div>
+                        <div class="input-field col s11">
+                            <i class="material-icons prefix">folder</i>
+                            <input id="m_folder" type="text" class="validate" required>
+                            <label for="m_folder">WWW Folder</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <a id="btn_folder" class="btn-floating"><i class="material-icons">folder_open</i></a>                      
+                        </div> 
+                        <div class="col s12">
+                        <blockquote class="noselect" style="border-left-color: green">
+                        <div class="row">Status</div>
+                        <div class="row center">
+                            <div class="col s2">
+                                <div id="st_worker" class="tooltipped" data-tooltip="Checks if instance is on workers.properties">
+                                <i class="material-icons">warning</i></div>
+                                 Worker
+                            </div>
+                            <div class="col s2">
+                                 <div id="st_properties" class="tooltipped" data-tooltip="Checks if instance properties file exists">
+                                <i class="material-icons">warning</i></div>
+                                 Properties
+                            </div>
+                            <div class="col s2">
+                                 <div id="st_vhost" class="tooltipped" data-tooltip="Checks if instance have assigned a virtualhost">
+                                <i class="material-icons">warning</i></div>
+                                 VirtualHost
+                            </div>
+                            <div class="col s2">
+                                <div id="st_hostname" class="tooltipped" data-tooltip="Checks if virtualhost hostname exists on /etc/hosts">
+                                <i class="material-icons">warning</i></div>
+                                 HostName
+                            </div>   
+                            <div class="col s2">
+                                 <div id="st_jvmport" class="tooltipped" data-tooltip="Checks if jvm.config port is not repeated in other instance">
+                                <i class="material-icons">warning</i></div>
+                                 Java Port
+                            </div>                                                                                       
+                        </div>
+                        </blockquote>                                                             
+                    </div>
+                    <div class="row">                        
+                        <a id="btn_msave" class="btn waves-effect waves-light right green btnsubmit">
+                            <i class="material-icons right">send</i>
+                            <span id="txt_btn_msave">Save</span>
+                        </a>
+                        <a class="waves-effect waves-light btn red" id="btn_OpenDeleteDialog"><i class="material-icons right">delete_forever</i> Delete</a>
+                        <a class="waves-effect waves-light btn" href="#modal2"><i class="material-icons right">delete</i> Clear all References</a>
+                    </div>            
+                </div>
+                </form>
+            </div>
+        </div>      
+        <script>require('../controller/main.js')</script>        
+    </body>
+</html>
